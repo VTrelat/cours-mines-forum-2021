@@ -24,8 +24,12 @@ a.special { /* On prend les fils directs de div.box qui contiennent a, et on app
 }
 
 #pem {
+  background: url("../img/pem.jpg") no-repeat center center fixed;
+  background-size: cover;
   font-family: Helvetica;
   font-weight: lighter;
+  width: 100vw;
+  height: 100vh;
 }
 
 #title1 {
@@ -43,13 +47,16 @@ a.special { /* On prend les fils directs de div.box qui contiennent a, et on app
 }
 
 label {
-  color: rgb(177, 0, 255)
+  color: black;
 }
 
 input {
   font-size: 20px;
 }
-
+#forum {
+  height: 100vh;
+  width: 100vw;
+}
 #main-content > #bloc {
   position: absolute;
   right: 0;
@@ -62,7 +69,6 @@ input {
 
 #forumtitle {
   font-size: 100px;
-  background: rgb(177,0,255);
   background: linear-gradient(to left, rgba(177,0,255,1) 0%, rgba(66,170,255,1) 100%); 
   text-align: center;
   font-family: Helvetica;
@@ -72,7 +78,7 @@ input {
 
 textarea
 {
-  border: double 2px transparent;
+  border: double 5px transparent;
   border-radius: 20px;
   background-image: linear-gradient(white, white), linear-gradient(to left, rgba(177,0,255,1) 0%, rgba(115, 92, 246) 100%);
   background-origin: border-box;
@@ -80,54 +86,80 @@ textarea
   width:100%;
   height: 100px;
   margin:5px 0;
-  padding:3px;
+  padding:0px;
 }
 
 #messageField
 {
+  align-self: center;
   position: relative;
-  border: double 2px transparent;
+  border: double 5px transparent;
   border-radius: 20px;
   background-image: linear-gradient(white, white), linear-gradient(to left, rgba(115, 92, 246) 0%, rgba(66,170,255,1) 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
   width:100%;
-  height: 80vh;
-  margin:5px 0;
-  padding:3px;
+  height: 70vh;
+  margin:5px;
+  padding:0px;
+  overflow: scroll;
 }
 
-#message
-{
-  position: relative;
-  font-size: 15px; 
-}
 #incomingMessage
 {
-  position: absolute;
   left: 10px;
   color: white;
-  border-radius: 15px;
+  border-radius: 5px 15px 15px 5px;
   background-color: rgba(66,170,255,1);
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
-  margin: 5px;
+  margin-top: -15px;
+  margin-bottom: -15px;
   width: fit-content;
 }
+.card {
+  border:none;
+  border-radius: 15px;
+  font-size: 15px;
+  font-family: 'Helvetica Neue';
+}
 
+.card > #sent{
+  align-self: flex-end;
+}
+
+#incoming > #username {
+  text-align: left;
+  font-weight: lighter;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+#sent > #username {
+  text-align: right;
+  font-weight: lighter;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
 #sentMessage
 {
-  position: absolute;
-  right: 10px;
   color: white;
-  border-radius: 15px;
+  border-radius: 15px 5px 5px 15px;
   background-color: rgba(115,92,246,1);
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
-  margin: 5px;
+  margin-top: -15px;
+  margin-bottom: -15px;
   width: fit-content;
 }
