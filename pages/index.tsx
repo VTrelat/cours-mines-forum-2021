@@ -24,6 +24,7 @@ const Home: NextPage = () => {
               <li><Link href="cours/liste"><a>Listes</a></Link></li>
               <li><Link href="cours/tableau"><a>Tableaux</a></Link></li>
               <li><Link href="cours/form"><a>Formulaires</a></Link></li>
+              <li><Link href="cours/pem"><a>Compte fan PEM</a></Link></li>
               <li><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap</a></li>
             </ul>
 
